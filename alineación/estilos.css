@@ -1,0 +1,30 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    /* auto-fill hace que el número de espacios se genere automáticamente para cubrir todo el espacio */
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px 2px ;
+    height: 100vh;
+    /* justify-items:  ; */
+    /* start pega los elementos al inicio
+    center lo alinea en el centro 
+    end los alinea al final
+    stretch los estira para que ocupen todo el espacio disponible */
+    justify-content: center;
+    align-content: center;
+    
+
+}
+.item{
+    padding: 10px;
+    border: 2px solid red;
+    background-color: royalblue;
+    display: grid;
+    grid-template:50px 50px 50px / 50px 50px 50px ;   
+}
+/* .item:nth-of-type(5){
+    align-self: start;
+    justify-self: start;
+con estas propiedades podemos alinear un elemento concreto    
+} */
+
