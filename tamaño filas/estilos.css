@@ -1,0 +1,26 @@
+.container{
+    display: grid;
+    grid-template-columns: [inicio] 1fr [línea2] 1fr [línea3] 1fr [destacado-end] 1fr [línea5] 1fr [destacado2-end] 1fr [línea7] 1fr [final];
+    grid-template-rows: [inicio] 200px [inicio2] 200px [final];
+    /* de esta forma podemos renombrar las líneas para aportar semántica */
+    height: 100vh;
+    gap: 5px;
+}
+.item{
+    padding: 10px;
+    border: 2px solid red;
+    background-color: rgb(140, 167, 250);
+    display: grid;
+    grid-template:50px 50px 50px / 50px 50px 50px ;   
+}
+.item:nth-of-type(1){
+    grid-column: inicio / destacado-end;
+    grid-row: inicio / final;
+}
+.item:nth-of-type(2){
+    grid-column: destacado-end / destacado2-end; 
+    grid-row: inicio / final;
+}
+.item:nth-of-type(3){
+    grid-column: destacado2-end / final;
+}

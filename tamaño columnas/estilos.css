@@ -1,0 +1,33 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px 2px ;
+    height: 100vh;
+}
+.item{
+    padding: 10px;
+    border: 2px solid red;
+    background-color: royalblue;
+    display: grid;
+    grid-template:50px 50px 50px / 50px 50px 50px ;   
+}
+.item:nth-of-type(1){
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* grid-column: 1 / 3; es equivalente */
+
+    /* con grid-column-star y grid-column-end indicamos en que columna empieza y en que columa acaba el elemento, se tienen n cuenta las líneas no el relleno, por lo que de la 1 a la 3 son dos columnas 
+    |1columna|2columna|3*/
+}
+.item:nth-of-type(5){
+    grid-column: 1 / span 2;
+    background-color: seagreen;
+    /* span sirve para indicar los espacios que ocupa en vez de la línea en la que acaba en este caso empieza en la línea 1 y ocupa dos espacios*/
+}
+.item:nth-of-type(8){
+    grid-column: 1 / -1;
+    /* con esta propiedad indicamos que ocupe todas las columnas */
+    background-color: tomato;
+}

@@ -1,4 +1,25 @@
 .container{
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    /* grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 300px 300px; */
+    /* grid-template: filas / columnas; */
+    grid-template:1fr 1fr 1fr / repeat(4, minmax(200px, 1fr)) ;
+    /* fr son fracciones repeat sirve para no tener que repetir código para cada columna, solo hay que indicar cuantas y de que medida */
+    /* minmax(min, max) sirve para asignar una medida mínima y otra máxima */
+    gap: 15px 2px ;
+}
+.item{
+    padding: 10px;
+    border: 2px solid red;
+    background-color: royalblue;
+    display: grid;
+    grid-template:50px 50px 50px / 50px 50px 50px ;   
+}
+.item .item{
+    background-color: seagreen;
+}
+/* grid explicito es el que designamos directamente
+grid implicito es el que css asigna automaticamente */
+.item:nth-of-type(4){
+    background-color: saddlebrown;
 }

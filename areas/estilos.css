@@ -1,0 +1,36 @@
+.container{
+    display: grid;
+    grid-template: 100px 1fr 150px / 200px 1fr ;
+    gap: 5px 2px ;
+    height: 100vh;
+    grid-template-areas: 
+    "header header"
+    "left contenido" 
+    "footer footer";
+}
+.item{
+    padding: 10px;
+    border: 2px solid red;
+    background-color: royalblue;
+    display: grid;
+    grid-template:50px 50px 50px / 50px 50px 50px ;   
+}
+.item .item{
+    background-color: seagreen;
+}
+.header{
+    grid-area: header;
+}
+.left{
+    grid-area: left;
+}
+.contenido{
+    grid-area: contenido;
+}
+.footer{
+    grid-area: footer;
+}
+
+.item:nth-of-type(4){
+    background-color: saddlebrown;
+}
